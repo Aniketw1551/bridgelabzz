@@ -1,13 +1,13 @@
 declare -A Arithmetic
 
-echo "Enter three numbers : "
+echo "Enter your three numbers : "
 read a;
 read b;
 read c;
-Arithmetic[V1]=$(($a+$b*$c))
-Arithmetic[V2]=$(($a%$b+$c))
-Arithmetic[V3]=$(($c+$a/$b))
-Arithmetic[V4]=$(($a*$b+$c))
+Arithmetic[A]=$(($a+$b*$c))
+Arithmetic[B]=$(($a%$b+$c))
+Arithmetic[C]=$(($c+$a/$b))
+Arithmetic[D]=$(($a*$b+$c))
 
 function Arithmetic() {
 
@@ -64,7 +64,7 @@ do
 	ArithmeticArray[((counter++))]=$(Arithmetic)
 done
 
-echo "Output is : " ${ArithmeticArray[@]}	
+echo "Aritmetic Computation Output is : " ${ArithmeticArray[@]}	
 
 sortTheArray ${ArithmeticArray[@]} 
 }
